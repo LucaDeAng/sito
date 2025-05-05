@@ -6,12 +6,33 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   
-  const handleSubmit = (e) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate API call
-    setTimeout(() => {
+    
+    if (!email) {
+      setError('Please enter your email address');
+      return;
+    }
+    
+    setIsLoading(true);
+    setError('');
+    
+    try {
+      // Import the API service only when needed to avoid issues
+      const apiService = (await import('../../services/api')).default;
+      
+      // Submit newsletter subscription
+      await apiService.subscribeToNewsletter(email);
       setIsSubmitted(true);
-    }, 1000);
+    } catch (err) {
+      console.error('Error subscribing to newsletter:', err);
+      setError(err.response?.data?.detail || 'Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
   
   return (
