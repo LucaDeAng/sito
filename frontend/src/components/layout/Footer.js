@@ -129,16 +129,35 @@ const Footer = () => {
             <div className="mt-8">
               <h3 className="text-subheading font-mono text-light-100 mb-4">Newsletter</h3>
               <p className="text-light-300 mb-3">Get the latest updates</p>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="your@email.com" 
-                  className="input rounded-r-none"
-                />
-                <button className="btn btn-primary rounded-l-none">
-                  Subscribe
-                </button>
-              </div>
+              <form onSubmit={async (e) => {
+                e.preventDefault();
+                const email = e.target.email.value;
+                if (!email) return;
+                
+                try {
+                  // Import the API service only when needed
+                  const apiService = (await import('../../services/api')).default;
+                  await apiService.subscribeToNewsletter(email);
+                  alert('Successfully subscribed to newsletter!');
+                  e.target.email.value = '';
+                } catch (err) {
+                  console.error('Error subscribing:', err);
+                  alert('Failed to subscribe. Please try again later.');
+                }
+              }}>
+                <div className="flex">
+                  <input 
+                    name="email"
+                    type="email" 
+                    placeholder="your@email.com" 
+                    className="input rounded-r-none"
+                    required
+                  />
+                  <button type="submit" className="btn btn-primary rounded-l-none">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
