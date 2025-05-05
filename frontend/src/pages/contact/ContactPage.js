@@ -24,7 +24,7 @@ const ContactPage = () => {
     }));
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
@@ -36,9 +36,13 @@ const ContactPage = () => {
       return;
     }
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Import the API service only when needed to avoid issues
+      const apiService = (await import('../../services/api')).default;
+      
+      // Submit form data to API
+      await apiService.submitContactForm(formData);
+      
       setIsSubmitted(true);
       // Reset form
       setFormData({
@@ -47,7 +51,12 @@ const ContactPage = () => {
         subject: '',
         message: '',
       });
-    }, 1500);
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError(err.response?.data?.detail || 'Something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   const contactMethods = [
