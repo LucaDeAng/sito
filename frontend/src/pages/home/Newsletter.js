@@ -65,17 +65,26 @@ const Newsletter = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
                     required
-                    className="input flex-grow"
+                    className={`input flex-grow ${error ? 'border-primary' : ''}`}
+                    disabled={isLoading}
                   />
                   <motion.button
                     type="submit"
                     className="btn btn-primary whitespace-nowrap"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    disabled={isLoading}
                   >
-                    Subscribe
+                    {isLoading ? 'Subscribing...' : 'Subscribe'}
                   </motion.button>
                 </div>
+                
+                {error && (
+                  <p className="text-primary text-body-sm mt-2">
+                    {error}
+                  </p>
+                )}
+                
                 <p className="text-light-400 text-body-sm mt-4">
                   No spam, unsubscribe at any time. Your data is protected.
                 </p>
