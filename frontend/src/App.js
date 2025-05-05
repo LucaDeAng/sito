@@ -8,6 +8,8 @@ import BlogPage from "./pages/blog/BlogPage";
 import UseCasesPage from "./pages/usecases/UseCasesPage";
 import AboutPage from "./pages/about/AboutPage";
 import ContactPage from "./pages/contact/ContactPage";
+import PromptsPage from "./pages/prompts/PromptsPage";
+import PromptDetail from "./pages/prompts/PromptDetail";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/usecases" element={<UseCasesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/prompts" element={<PromptsPage />} />
+          <Route path="/prompts/:id" element={<PromptDetail />} />
         </Routes>
       </Layout>
     </Router>
