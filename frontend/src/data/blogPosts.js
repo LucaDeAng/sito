@@ -14,7 +14,7 @@ export const blogPosts = [
     title: 'Ethical Considerations in AI Art Creation',
     excerpt: 'Articolo in arrivo.',
     date: '2025-04-15',
-    image: '/images/blog/ethical-considerations-in-ai-art-creation.jpg',
+    image: '/img/ethical-considerations-in-ai-art-creation.jpg',
     category: 'Ethics',
     readTime: 9,
     content: ''
@@ -24,7 +24,7 @@ export const blogPosts = [
     title: 'Prompt Engineering: The New Programming Paradigm',
     excerpt: 'Articolo in arrivo.',
     date: '2025-04-07',
-    image: '/images/blog/prompt-engineering-new-programming-paradigm.jpg',
+    image: '/img/prompt-engineering-new-programming-paradigm.jpg',
     category: 'Tutorials',
     readTime: 6,
     content: ''
@@ -34,7 +34,7 @@ export const blogPosts = [
     title: 'Multimodal AI Systems: Beyond Text Generation',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-25',
-    image: '/images/blog/multimodal-ai-systems.jpg',
+    image: '/img/multimodal-ai-systems.jpg',
     category: 'AI Research',
     readTime: 8,
     content: ''
@@ -44,7 +44,7 @@ export const blogPosts = [
     title: 'Fine-tuning Large Language Models for Specialized Tasks',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-18',
-    image: '/images/blog/fine-tuning-llms-specialized-tasks.jpg',
+    image: '/img/fine-tuning-llms-specialized-tasks.jpg',
     category: 'Tutorials',
     readTime: 11,
     content: ''
@@ -54,7 +54,7 @@ export const blogPosts = [
     title: 'The Rise of AI Agents: Autonomous Systems in Practice',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-10',
-    image: '/images/blog/rise-of-ai-agents.jpg',
+    image: '/img/rise-of-ai-agents.jpg',
     category: 'Technology Trends',
     readTime: 9,
     content: ''
@@ -64,7 +64,7 @@ export const blogPosts = [
     title: 'Creative Collaboration Between Humans and AI',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-01',
-    image: '/images/blog/creative-collaboration-humans-ai.jpg',
+    image: '/img/creative-collaboration-humans-ai.jpg',
     category: 'Creativity',
     readTime: 7,
     content: ''
@@ -74,7 +74,7 @@ export const blogPosts = [
     title: 'Building Responsible AI Systems: A Framework',
     excerpt: 'Articolo in arrivo.',
     date: '2025-02-20',
-    image: '/images/blog/responsible-ai-systems-framework.jpg',
+    image: '/img/responsible-ai-systems-framework.jpg',
     category: 'Ethics',
     readTime: 10,
     content: ''
