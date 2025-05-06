@@ -1,0 +1,77 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+✍️ Cursor Rules per il progetto "GenAI Portfolio & Blog"
+Queste regole sono pensate per facilitare lo sviluppo del sito in React su Cursor, mantenendo il codice ordinato, scalabile e allineato all’obiettivo: un blog professionale sulla Generative AI.
+
+⚙️ Best practice di sviluppo
+#useFunctionNames
+Nomina funzioni e componenti React in modo chiaro e descrittivo in base alla loro responsabilità.
+Esempio: SingleBlogPage, BlogCard, filterBySlug.
+
+#useArrowFunctions
+Usa arrow function per definire componenti e metodi, salvo eccezioni.
+
+jsx
+Copy
+Edit
+const BlogCard = ({ post }) => (
+  <div>{post.title}</div>
+);
+#preferDestructuring
+Usa la destrutturazione di oggetti in props e nei dati per mantenere leggibilità:
+
+js
+Copy
+Edit
+const BlogCard = ({ post: { title, excerpt, image } }) => ( ... )
+#singleResponsibility
+Ogni componente deve fare solo una cosa: una card, una pagina, un layout.
+
+🧠 Routing e architettura
+#reactRouterBestPractices
+Usa react-router-dom con route dinamiche (/blog/:slug) per pagine singole.
+Aggiungi nel router principale:
+
+jsx
+Copy
+Edit
+<Route path="/blog/:slug" element={<SingleBlogPage />} />
+#separateDataFromViews
+Sposta i contenuti (come blogPosts) in file separati (blogData.js) per migliorare la gestione.
+
+js
+Copy
+Edit
+// blogData.js
+export const blogPosts = [ ... ];
+🛠️ Qualità del codice
+#addTypeHints
+Documenta le proprietà dei post con JSDoc o TypeScript per facilitare l’autocompletamento e il debugging.
+
+js
+Copy
+Edit
+/**
+ * @typedef {Object} BlogPost
+ * @property {string} title
+ * @property {string} slug
+ * @property {string} excerpt
+ * @property {string} image
+ * @property {string} date
+ * @property {number} readTime
+ */
+#framerMotionGuidelines
+Quando usi Framer Motion, applica l’animazione solo al wrapper visivo, non all’intero componente.
+
+📎 Prompt esempio da usare in Cursor
+plaintext
+Copy
+Edit
+Crea una pagina dinamica per il blog con routing da slug, usando #useFunctionNames #preferDestructuring #reactRouterBestPractices #separateDataFromViews
+🧾 Obiettivo del progetto
+Un sito portfolio ispirato al Dadaismo, con contenuti esclusivamente incentrati sulla Generative AI, tra cui articoli, use case, prototipi e riflessioni critiche.
+
+
