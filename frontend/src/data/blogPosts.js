@@ -4,7 +4,7 @@ export const blogPosts = [
     title: 'The Evolution of Generative AI Models',
     excerpt: 'Articolo in arrivo.',
     date: '2025-04-28',
-    image: '/images/blog/placeholder.jpg',
+    image: 'https://preview.reve.art/api/project/dea0596a-373c-4ad0-a407-53e20d82bbbb/image/5f9d7eec-9f0d-49a1-b48d-386b4698259a/url/filename/5f9d7eec-9f0d-49a1-b48d-386b4698259a?fit=contain&width=576',
     category: 'AI Research',
     readTime: 7,
     content: ''
@@ -14,7 +14,7 @@ export const blogPosts = [
     title: 'Ethical Considerations in AI Art Creation',
     excerpt: 'Articolo in arrivo.',
     date: '2025-04-15',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/ethical-considerations-in-ai-art-creation.jpg',
     category: 'Ethics',
     readTime: 9,
     content: ''
@@ -24,7 +24,7 @@ export const blogPosts = [
     title: 'Prompt Engineering: The New Programming Paradigm',
     excerpt: 'Articolo in arrivo.',
     date: '2025-04-07',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/prompt-engineering-new-programming-paradigm.jpg',
     category: 'Tutorials',
     readTime: 6,
     content: ''
@@ -34,7 +34,7 @@ export const blogPosts = [
     title: 'Multimodal AI Systems: Beyond Text Generation',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-25',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/multimodal-ai-systems.jpg',
     category: 'AI Research',
     readTime: 8,
     content: ''
@@ -44,7 +44,7 @@ export const blogPosts = [
     title: 'Fine-tuning Large Language Models for Specialized Tasks',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-18',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/fine-tuning-llms-specialized-tasks.jpg',
     category: 'Tutorials',
     readTime: 11,
     content: ''
@@ -54,7 +54,7 @@ export const blogPosts = [
     title: 'The Rise of AI Agents: Autonomous Systems in Practice',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-10',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/rise-of-ai-agents.jpg',
     category: 'Technology Trends',
     readTime: 9,
     content: ''
@@ -64,7 +64,7 @@ export const blogPosts = [
     title: 'Creative Collaboration Between Humans and AI',
     excerpt: 'Articolo in arrivo.',
     date: '2025-03-01',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/creative-collaboration-humans-ai.jpg',
     category: 'Creativity',
     readTime: 7,
     content: ''
@@ -74,7 +74,7 @@ export const blogPosts = [
     title: 'Building Responsible AI Systems: A Framework',
     excerpt: 'Articolo in arrivo.',
     date: '2025-02-20',
-    image: '/images/blog/placeholder.jpg',
+    image: '/images/blog/responsible-ai-systems-framework.jpg',
     category: 'Ethics',
     readTime: 10,
     content: ''
