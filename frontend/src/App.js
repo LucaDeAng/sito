@@ -10,6 +10,7 @@ import AboutPage from "./pages/about/AboutPage";
 import ContactPage from "./pages/contact/ContactPage";
 import PromptsPage from "./pages/prompts/PromptsPage";
 import PromptDetail from "./pages/prompts/PromptDetail";
+import SingleBlogPage from './pages/SingleBlogPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<SingleBlogPage />} />
           <Route path="/usecases" element={<UseCasesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
